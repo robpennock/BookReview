@@ -1,3 +1,10 @@
 <h1>Edit Book</h1>
 <!-- rails will populate edit form -->
-<%= render 'form' %>
+<%= simple_form_for @book do |f| %>
+	<% #f.select below allows for us to pass the current category of this book to the user %>
+	<%= f.select :category_id, @categories %>
+	<%= f.input :title, label: "Book Title" %>
+	<%= f.input :description, label: "Enter book description" %>
+	<%= f.input :author, label: "Author Name" %>
+	<%= f.button :submit, label: "Submit Book" %>
+<% end %>

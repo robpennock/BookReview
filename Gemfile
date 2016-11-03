@@ -12,6 +12,10 @@ gem 'sass-rails', '~> 5.0'
 #simple_form and bootstrap-sass
 gem 'simple_form', '~> 3.3', '>= 3.3.1'
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+#devise for user authentication. Version 4.2 wont install had to roll back
+#be sure to check out the devise stuff in config environments at launch
+gem 'devise', '~> 3.5.1'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views

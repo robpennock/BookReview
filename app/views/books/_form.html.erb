@@ -1,4 +1,8 @@
-<%= simple_form_for @book do |f| %>
+<% #multipart post to backend %>
+<%= simple_form_for @book, :html => { :multipart => true } do |f| %>
+	<% #category_id links to migration adding the category ids to books %>
+	<% #options for select is one of those special rails thingies %>
+	<%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select a Category") %>
 	<%= f.input :title, label: "Book Title" %>
 	<%= f.input :description, label: "Enter book description" %>
 	<%= f.input :author, label: "Author Name" %>

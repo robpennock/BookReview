@@ -1,6 +1,10 @@
-<% @books.each do |book| %>
-	<% #show all books and link to specific book via passed path %>
-	<h2><%= link_to book.title, book_path(book) %>, <%= book.author %> </h2>
+<h1 class="current-category"> <u><%= params[:category] %> </u></h1>
+<% if @books.count == 0 %>
+	<h2>There are no books in this category.</h2>
+<% else %> 
+	<% @books.each do |book| %>
+		<% #show all books and link to specific book via passed path %>
+		<h2><%= link_to book.title, book_path(book) %>, <%= book.author %> </h2>
+	<% end %>
+	
 <% end %>
-
-<%= link_to "Add a Book", new_book_path %>
