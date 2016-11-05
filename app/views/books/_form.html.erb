@@ -3,6 +3,8 @@
 	<% #category_id links to migration adding the category ids to books %>
 	<% #options for select is one of those special rails thingies %>
 	<%= select_tag(:category_id, options_for_select(@categories), :prompt => "Select a Category") %>
+	<!-- add filefield for book images via paperclip gem-->
+	<%= f.file_field :book_img %>
 	<%= f.input :title, label: "Book Title" %>
 	<%= f.input :description, label: "Enter book description" %>
 	<%= f.input :author, label: "Author Name" %>

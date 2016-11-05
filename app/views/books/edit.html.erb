@@ -3,6 +3,7 @@
 <%= simple_form_for @book do |f| %>
 	<% #f.select below allows for us to pass the current category of this book to the user %>
 	<%= f.select :category_id, @categories %>
+	<%= f.file_field :book_img %>
 	<%= f.input :title, label: "Book Title" %>
 	<%= f.input :description, label: "Enter book description" %>
 	<%= f.input :author, label: "Author Name" %>
